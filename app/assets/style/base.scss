@@ -1,0 +1,50 @@
+/* =====================================================================
+  CAUTION: Don't edit this file basically.
+===================================================================== */
+
+/* ==============================
+  Header Size
+============================== */
+$header-height: 3.5rem;
+$header-media: $middle;
+
+/* ==============================
+  Color
+============================== */
+// theme color
+$theme-color: #e65100;
+$subtheme-color:  #546E7A;
+
+// background color
+$bg-color: white;
+$header-bg-color: white;
+
+// border
+$border-color: #EEEEEE;
+
+// typograohy color
+$typo-color: #212121;
+$typo-color-md: #424242;
+$typo-color-lt: #757575;
+
+// system color - button
+$btn-success: #43A047;
+$btn-info: #1976D2;
+$btn-danger: #E53935;
+$btn-alert: #FBC02D;
+
+/* ==============================
+  Body
+============================== */
+body {
+  // default styles
+  background: $bg-color;
+  color: $typo-color;
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック','MS PGothic',sans-serif;
+  // font size
+  font-size: .9rem;
+  line-height: 1.2rem;
+  @media #{$middle} { font-size: 1rem; }
+  // set all text wrap
+  word-break : break-word;
+}

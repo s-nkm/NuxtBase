@@ -1,6 +1,7 @@
 
 export default {
   mode: 'spa',
+  srcDir: 'app',
   /*
   ** Headers of the page
   */
@@ -41,12 +42,20 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    '@nuxtjs/dotenv',
+    '@nuxtjs/style-resources',
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+  },
+  styleResources: {
+    scss: [ 
+      '~/assets/style/lib/*',
+      '~/assets/style/base.scss',
+    ]
   },
   /*
   ** Build configuration

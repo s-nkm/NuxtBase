@@ -1,0 +1,27 @@
+/* ==============================
+  Default
+============================== */
+.page-enter-active, .page-leave-active {
+  transition: opacity .2s;
+}
+.page-enter, .page-leave-active {
+  opacity: 0
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active { 
+  transition: transform .2s ease, opacity .2s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.list-item {
+  transition: all .3s;
+  width: 100%;
+}
+.list-enter, .list-leave-to { opacity: 0; }
+.list-leave-active { position: absolute; }
+
+

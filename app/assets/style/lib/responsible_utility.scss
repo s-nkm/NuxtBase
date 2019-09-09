@@ -1,0 +1,36 @@
+/* =====================================================================
+  Bootstrap Responsible Utility
+
+  https://v4-alpha.getbootstrap.com/layout/responsive-utilities/#available-classes
+===================================================================== */
+
+$xlg: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 544px;
+$screen-sizes: ( 
+  xlg: $xlg,
+  lg: $lg,
+  md: $md,
+  sm: $sm
+);
+
+/* =====================================================================
+  Media Query
+  how to use: @media {$middle} { ... };
+===================================================================== */
+$xlarge: "only screen and (min-width:#{ $xlg })";
+$large:  "only screen and (min-width:#{ $lg })";
+$middle: "only screen and (min-width:#{ $md })";
+$small:  "only screen and (min-width:#{ $sm })";
+$xlarge-max: "only screen and (max-width:{ $xlg })";
+$large-max:  "only screen and (max-width:#{ $lg }";
+$middle-max: "only screen and (max-width:#{ $md })";
+$small-max:  "only screen and (max-width:#{ $sm })";
+
+$media-queries: ( 
+  xlg: $xlarge,
+  lg: $large,
+  md: $middle,
+  sm: $small
+);

@@ -1,0 +1,88 @@
+/* =====================================================================
+  Spacing
+  * using bootstrap spacing const.
+  * see " ../library/spacing.scss"
+  https://getbootstrap.com/docs/4.0/utilities/spacing/
+
+  .-spacing-0: 0,
+  .-spacing-1: 0.25rem,
+  .-spacing-2: 0.5rem,
+  .-spacing-3: 1rem,
+  .-spacing-4: 1.5rem,
+  .-spacing-5: 2rem
+  ...
+===================================================================== */
+$bootstrap-spacing: (
+  0: 0,
+  1: .25rem,
+  2: .5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem,
+  6: 4.5rem
+);
+
+// column
+@each $num, $space in $bootstrap-spacing {
+  &.--spacing-col-#{ $num } {
+    >* { margin-bottom: $space; }
+    >*:last-child { margin-bottom: 0; }
+  }
+}
+
+// row
+@each $num, $space in $bootstrap-spacing {
+  &.--spacing-row-#{$num} {
+    >*{
+      margin-bottom: 0;
+      margin-right: $space;
+    }
+    >*:last-child { margin-right: 0; }
+  }
+}
+
+// column with media query
+@each $media-name, $media in $media-queries {
+  @each $num, $space in $bootstrap-spacing {
+    &.--spacing-col-#{ $media-name }-#{ $num } {
+      // Column
+      >* {
+        @media #{$media} {
+          margin-right: 0;
+          margin-bottom: $space;
+        }
+      }
+      >*:last-child {
+        @media #{$media} { margin-bottom: 0; }
+      }
+    }
+  }
+}
+
+// row with media query
+@each $media-name, $media in $media-queries {
+  @each $num, $space in $bootstrap-spacing {
+    &.--spacing-row-#{ $media-name }-#{ $num } {
+      >*{
+        @media #{$media} {
+          margin-bottom: 0;
+          margin-right: $space;
+        }
+      }
+      >*:last-child {
+        @media #{$media} { margin-right: 0; }
+      }
+    }
+  }
+}
+// reset
+@each $media-name, $media in $media-queries {
+  &.--spacing-#{ $media-name }-none {
+    >*{
+      @media #{$media} {
+        margin-bottom: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
