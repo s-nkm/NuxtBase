@@ -1,5 +1,6 @@
 <template lang="pug">
 .c-sample
+  font-awesome-icon.icon(icon="star")
   | This is sample component.
   | {{ message }}
 </template>
@@ -21,6 +22,8 @@ export default {
 
 <style lang="scss" scoped>
 .c-sample {
+  display: flex;
+  align-content: center;
   background: $theme-color;
   color: white;
   padding: 1rem;
