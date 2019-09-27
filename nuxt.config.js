@@ -1,3 +1,13 @@
+const ENV = process.env.ENV || 'development'
+const config = {
+  staging: {
+    dotenv: '.env/staging'
+  },
+  development: {
+    dotenv: '.env/development'
+  } 
+}
+require('dotenv').config({ path: config[ENV]['dotenv'] })
 
 export default {
   mode: 'spa',
