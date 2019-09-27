@@ -1,7 +1,8 @@
 <template lang="pug">
 section.l-sample
-  | {{ message }} {{ sample }}
+  .message {{ message }} {{ sample }}
   Sample(message="This is message.")
+  .dayjs {{ $dayjs().format('YYYY/MM/DD (ddd)') }}
 </template>
 
 <script>

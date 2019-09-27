@@ -29,6 +29,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src:'~/plugins/dayjs' },
   ],
   /*
   ** Nuxt.js dev-modules
