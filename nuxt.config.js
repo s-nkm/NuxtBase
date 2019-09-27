@@ -35,10 +35,16 @@ export default {
   */
   css: [
   ],
+  /* Env */
+  env: {
+    AUTH_DOMAIN: process.env.AUTH_DOMAIN, 
+    AUTH_CLIENT_ID: process.env.AUTH_CLIENT_ID,
+  },
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src:'~/plugins/auth0' },
     { src:'~/plugins/dayjs' },
   ],
   /*

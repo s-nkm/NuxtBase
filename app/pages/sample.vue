@@ -1,5 +1,6 @@
 <template lang="pug">
 section.l-sample
+  .login You are {{ isLogin }}
   .message {{ message }} {{ sample }}
   Sample(message="This is message.")
   .dayjs {{ $dayjs().format('YYYY/MM/DD (ddd)') }}
@@ -17,6 +18,9 @@ export default {
   },
   computed: {
     ...mapGetters('sample', ['sample']),
+    isLogin(){
+      return this.$auth0.isAuthenticated() ? 'logined.' : 'not logined.' 
+    }
   },
   methods: {
     ...mapActions('sample', ['setSample']),
